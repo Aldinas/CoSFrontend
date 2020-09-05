@@ -1,4 +1,4 @@
-# Closed on Sundays Game Front End Site
+# Closed on Sundays Front End Site
 ## Requirements
 In order to build and test this framework you will need Docker Engine 18 or higher and Docker Compose 1.25 or higher. It may work on older versions but is untested. 
 
