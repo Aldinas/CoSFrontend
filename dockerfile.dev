@@ -1,0 +1,16 @@
+# Using PHP 7.2 official image, Apache build.
+FROM php:7.2-apache
+# Set apache root to be public dir since its laravel.
+# Rewrite docroot to match the required one sent in the env.
+ENV APACHE_DOCUMENT_ROOT /var/www/html/public
+RUN a2enmod rewrite  && \
+    apt-get update -y && apt-get install git unzip zip npm -y && \
+    sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf && \
+    sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+
+COPY . /var/www/html
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
+    php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
+    composer install && \
+    npm install && \
+    npm run dev

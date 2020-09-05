@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  laravel_frontend:
+    build:
+      context: .
+      dockerfile: dockerfile.dev
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+      - /var/www/html/vendor
+      - /var/www/html/node_modules
+networks:
+  default:
+    external:
+      name: lumen_default

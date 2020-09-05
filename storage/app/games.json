@@ -1,0 +1,31 @@
+{
+    "endlessrunner":
+        {
+            "friendlyName": "Endless Runner",
+            "controls":"Use the left mouse button or the space bar to jump, and the escape key to pause. Text entry is done with your keyboard. The level is randomly regenerated each day, come back tomorrow for another challenge! ",
+            "hasScores": true,
+            "description": "Run, run, run as fast as you can. Jump over enemies and keep running. New level generate daily!"
+        },
+    "blockbreaker":
+        {
+            "friendlyName": "Block Breaker",
+            "controls":"Use the mouse to move the paddle, use the left mouse button to launch the ball.",
+            "hasScores": false,
+            "description": "An arkanoid clone, use the paddle to deflect the ball into the blocks."
+        },
+        "tapracer":
+        {
+            "friendlyName": "Tap Racer",
+            "controls":"Click go button to accelerate, try and beat your opponent to the finish line.",
+            "hasScores": false,
+            "description": "A simple tap to move drag racer game, designed originally to go on tablet so still has some touch components."
+        },
+    "smashsteroids":
+        {
+            "friendlyName": "Smashsteroids",
+            "controls":"Use the WASD keys to move, and the left mouse button to fire.",
+            "hasScores": false,
+            "description": "My first ever unity game, a side scrolling shoot em up. Requires the old school Unity Web Player plugin to run."
+        }
+
+}
